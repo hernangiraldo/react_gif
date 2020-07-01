@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './GifGridItem.scss';
 
@@ -9,6 +10,11 @@ const GifGridItem = ({ title, url }) => {
       <img src={ url } alt={ title }/>
     </div>
   );
+}
+
+GifGridItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 }
 
 export default GifGridItem;
